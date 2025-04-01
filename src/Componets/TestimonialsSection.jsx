@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import user from "../assets/images/user1.jpeg";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css"; 
 
 const testimonials = [
   {
