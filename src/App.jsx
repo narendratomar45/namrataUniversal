@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className=" bg-gray-200">
+    <div>
       <BrowserRouter>
         <Navbar />
         <Routes>
