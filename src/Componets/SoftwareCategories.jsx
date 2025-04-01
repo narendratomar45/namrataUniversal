@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import systemSoftware from "../assets/images/systemSoftware.jpg";
 import softwareDevelopment from "../assets/images/softwareDevlopment.avif";
 import crmSoftware from "../assets/images/crmSoftware.jpg";
@@ -9,6 +8,8 @@ import securitySoftware from "../assets/images/securitySoftware.jpg";
 import embaddedSoftware from "../assets/images/embaddedSoftware.jpg";
 import aiSoftware from "../assets/images/aiSoftware.jpg";
 import gamingSoftware from "../assets/images/gamingSoftware.jpeg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const softwareCategories = [
   {
@@ -63,41 +64,46 @@ const softwareCategories = [
 
 const SoftwareCategories = () => {
   const [more, setMore] = useState(false);
+
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      offset: 100,
+    });
+  }, []);
+
   const handleCategory = () => {
     setMore(!more);
   };
 
   return (
     <div className="bg-gray-100 text-gray-800 py-16 px-6 md:px-20">
-      <motion.h2
+      <h2
         className="text-4xl font-bold text-center mb-10 tracking-wide"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        data-aos="fade-down"
       >
         <span className="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
           Software Solutions
         </span>
-      </motion.h2>
+      </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {softwareCategories
           .slice(0, more ? softwareCategories.length : 3)
           .map((category, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 hover:border-blue-500"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              className="bg-white p-6  shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 hover:border-blue-500 group rounded-tl-[50px] rounded-br-[50px] rounded-tr-4xl "
             >
-              <div className="overflow-hidden rounded-lg mb-4">
-                <motion.img
+              <div className="overflow-hidden rounded-lg mb-4 rounded-tl-[50px] rounded-br-[50px] ">
+                <img
                   src={category.image}
                   alt={category.title}
-                  className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-500"
-                  whileHover={{ scale: 1.05 }}
+                  className="w-full h-48 object-cover  group-hover:scale-105 transition-transform duration-500 rounded-tl-[50px] rounded-br-[50px]  "
                 />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">
@@ -106,22 +112,17 @@ const SoftwareCategories = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 {category.description}
               </p>
-              <motion.div
-                className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-blue-100 to-blue-50 text-blue-600 font-medium border border-blue-200"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <div className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-blue-100 to-blue-50 text-blue-600 font-medium border border-blue-200 hover:scale-[1.03] active:scale-95 transition-transform">
                 Learn More →
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
       </div>
 
-      <motion.div
+      <div
         className="text-center mt-12"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
+        data-aos="fade-up"
+        data-aos-delay="300"
       >
         <button
           onClick={handleCategory}
@@ -129,7 +130,7 @@ const SoftwareCategories = () => {
         >
           {more ? "Show Less" : "Show More Categories"}
         </button>
-      </motion.div>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,8 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FiPhone } from "react-icons/fi";
+import React, { useEffect } from "react";
+import { FiPhone, FiMail } from "react-icons/fi";
 import support from "../assets/images/support.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const CallToAction = () => {
   const stats = [
@@ -11,75 +12,115 @@ const CallToAction = () => {
     { value: "24/7", label: "Support" },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      offset: 100,
+    });
+  }, []);
+
   return (
-    <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <h2 className="text-blue-600 text-center font-bold text-5xl mb-8">Call To Action</h2>
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          data-aos="fade-up"
+        >
           {stats.map((stat, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-400"
+              data-aos="flip-left"
+              data-aos-delay={index * 100}
+              className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-600 rounded-tl-[50px] rounded-br-[50px] "
             >
-              <div className="text-4xl font-bold text-blue-600 mb-2">
+              <div
+                data-aos="zoom-in"
+                data-aos-delay={index * 100 + 300}
+                className="text-4xl font-bold text-blue-600 mb-2"
+              >
                 {stat.value}
               </div>
               <div className="text-lg text-gray-600">{stat.label}</div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200"
+        {/* CTA Section */}
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow"
         >
           <div className="md:flex">
             <div className="md:w-2/3 p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              <h2
+                data-aos="fade-right"
+                data-aos-delay="300"
+                className="text-3xl font-bold text-gray-800 mb-4"
+              >
                 Have Any Questions?
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p
+                data-aos="fade-right"
+                data-aos-delay="400"
+                className="text-lg text-gray-600 mb-6"
+              >
                 Our team of experts is ready to help you with any queries about
                 our IT services. Contact us today and let's discuss how we can
                 help your business grow.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <motion.a
+              <div
+                data-aos="fade-up"
+                data-aos-delay="500"
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <a
                   href="tel:+918506922777"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-sm hover:shadow-md transition-all"
                 >
                   <FiPhone className="text-xl" />
                   Call Now: +91 8506922777
-                </motion.a>
-                <motion.a
+                </a>
+                <a
                   href="mailto:namratauniversal@gmail.com"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="flex items-center justify-center px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors"
+                  className="flex items-center justify-center gap-2 px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors"
                 >
+                  <FiMail className="text-xl" />
                   Email Us
-                </motion.a>
+                </a>
               </div>
             </div>
-            <div className="hidden md:block md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-50">
-              <div className="h-full flex items-center justify-center p-4">
+            <div className="hidden md:block md:w-1/3 bg-gradient-to-br from-blue-100 to-blue-50 relative overflow-hidden">
+              <div
+                data-aos="fade-left"
+                data-aos-delay="600"
+                className="h-full flex items-center justify-center p-4"
+              >
                 <img
                   src={support}
                   alt="Support team"
                   className="w-full h-auto object-contain"
+                  data-aos="zoom-in"
+                  data-aos-delay="700"
                 />
               </div>
+              {/* Decorative elements */}
+              <div
+                className="absolute -bottom-20 -right-20 w-40 h-40 rounded-full bg-blue-400 opacity-10"
+                data-aos="fade"
+                data-aos-delay="800"
+              />
+              <div
+                className="absolute -top-10 -left-10 w-24 h-24 rounded-full bg-blue-300 opacity-10"
+                data-aos="fade"
+                data-aos-delay="900"
+              />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

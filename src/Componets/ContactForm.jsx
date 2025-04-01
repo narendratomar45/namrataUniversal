@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,15 @@ const ContactForm = () => {
 
   const mapLocation =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.41809200449!2d77.33415957495878!3d28.686328181636732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb002858866f%3A0x74eb6484c3004ae3!2sNamrata%20Universal%20Branch%20office!5e1!3m2!1sen!2sin!4v1743242971569!5m2!1sen!2sin";
+
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,13 +38,7 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="pt-20 pb-12 px-6 text-center"
-      >
+      <div data-aos="fade-down" className="pt-10 pb-8 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
           Contact <span className="text-blue-500">Us</span>
         </h1>
@@ -43,23 +47,23 @@ const ContactForm = () => {
           contact us by filling out the details below. We'll respond as soon as
           possible.
         </p>
-      </motion.div>
+      </div>
 
       {/* Contact Cards */}
-      <div className="flex flex-wrap justify-center gap-6 px-6 mb-12">
+      <div className="flex flex-wrap justify-center gap-6 px-6 mb-12 rounded-tl-4xl rounded-br-4xl">
         {[
           {
             icon: <FiMail className="text-2xl" />,
             title: "Email Us",
             content: "namratauniversal@gmail.com",
-            color: "bg-blue-100 border border-blue-200",
+            color: "bg-blue-100 border border-blue-600",
             textColor: "text-blue-600",
           },
           {
             icon: <FiPhone className="text-2xl" />,
             title: "Call Us",
             content: "+918506922777/+918506944777",
-            color: "bg-green-100 border border-green-200",
+            color: "bg-green-100 border border-green-600",
             textColor: "text-green-600",
           },
           {
@@ -67,17 +71,15 @@ const ContactForm = () => {
             title: "Visit Us",
             content:
               "Plot No-827 1st Floor Shalimar Garden Extension-1 Ghaziabad, UP",
-            color: "bg-purple-100 border border-purple-200",
+            color: "bg-purple-100 border border-purple-600",
             textColor: "text-purple-600",
           },
         ].map((item, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -5 }}
-            className={`${item.color} p-6 rounded-xl shadow-sm w-full sm:w-72`}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            className={`${item.color} p-6 rounded-xl shadow-sm w-full sm:w-72 hover:-translate-y-1 transition-transform rounded-tl-[50px] rounded-br-[50px]`}
           >
             <div className="flex items-center mb-4">
               <div className={`p-3 ${item.textColor} rounded-full mr-4`}>
@@ -88,31 +90,34 @@ const ContactForm = () => {
               </h3>
             </div>
             <p className="text-gray-700">{item.content}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full px-6 pb-16 gap-8 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="w-full lg:w-1/2 flex items-center justify-center"
+      <div className="flex flex-col lg:flex-row w-full px-6 pb-16 gap-8 max-w-7xl mx-auto ">
+        <div
+          data-aos="fade-right"
+          className="w-full lg:w-1/2 flex items-center justify-center "
         >
-          <div className="w-full max-w-lg p-8 bg-white rounded-xl shadow-lg border border-gray-200">
+          <div className="w-full max-w-lg p-8 bg-white rounded-xl shadow-lg  border border-blue-600">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold mb-2 text-gray-800">
+              <h2
+                data-aos="fade-up"
+                className="text-3xl font-bold mb-2 text-gray-800"
+              >
                 Get In Touch
               </h2>
-              <p className="text-gray-600">We'd love to hear from you!</p>
+              <p
+                data-aos="fade-up"
+                data-aos-delay="100"
+                className="text-gray-600"
+              >
+                We'd love to hear from you!
+              </p>
             </div>
 
             {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-8"
-              >
+              <div data-aos="zoom-in" className="text-center py-8">
                 <div className="inline-block p-4 bg-green-100 rounded-full mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -136,15 +141,14 @@ const ContactForm = () => {
                   Your message has been sent successfully. We'll contact you
                   soon.
                 </p>
-              </motion.div>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 {Object.keys(formData).map((entry, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100 + 200}
                   >
                     <label
                       htmlFor={entry}
@@ -173,31 +177,32 @@ const ContactForm = () => {
                         required
                       />
                     )}
-                  </motion.div>
+                  </div>
                 ))}
 
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <button
+                  data-aos="fade-up"
+                  data-aos-delay="500"
                   type="submit"
-                  className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-white font-semibold shadow-sm transition duration-300"
+                  className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-white font-semibold shadow-sm transition duration-300 transform hover:scale-102 active:scale-98"
                 >
                   Send Message
-                </motion.button>
+                </button>
               </form>
             )}
 
-            <div className="mt-6 text-center text-gray-500 text-sm">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="600"
+              className="mt-6 text-center text-gray-500 text-sm"
+            >
               <p>Or reach us directly at: namratauniversal@gmail.com</p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Map Section */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
+          data-aos="fade-up"
           className="w-full lg:w-1/2 h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-lg border border-gray-200"
         >
           <iframe
@@ -212,7 +217,7 @@ const ContactForm = () => {
             title="Google Map Location"
             className="rounded-xl"
           ></iframe>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

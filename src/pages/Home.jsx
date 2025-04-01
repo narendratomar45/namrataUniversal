@@ -9,6 +9,7 @@ import TestimonialsSection from "../Componets/TestimonialsSection";
 import FAQSection from "../Componets/FAQSection";
 import CallToAction from "../Componets/CallToAction";
 import AboutSection from "../Componets/AboutSection";
+import OurClients from "../Componets/OurClients";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <SoftwareCategories />
       <TestimonialsSection />
       <CallToAction />
+      <OurClients />
       <ContactForm />
       <FAQSection />
     </div>
