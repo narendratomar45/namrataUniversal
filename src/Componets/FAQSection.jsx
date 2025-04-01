@@ -38,7 +38,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-12 px-6 bg-gray-200">
+    <div className="w-full  mx-auto py-12 px-6 bg-gray-100">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-800 mb-2">
           Frequently Asked Questions

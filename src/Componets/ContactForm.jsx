@@ -27,7 +27,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-200">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -92,9 +92,7 @@ const ContactForm = () => {
         ))}
       </div>
 
-      {/* Main Content */}
       <div className="flex flex-col lg:flex-row w-full px-6 pb-16 gap-8 max-w-7xl mx-auto">
-        {/* Form Section */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

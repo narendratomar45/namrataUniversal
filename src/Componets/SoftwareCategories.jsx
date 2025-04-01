@@ -68,7 +68,7 @@ const SoftwareCategories = () => {
   };
 
   return (
-    <div className="bg-gray-200 text-gray-800 py-16 px-6 md:px-20">
+    <div className="bg-gray-100 text-gray-800 py-16 px-6 md:px-20">
       <motion.h2
         className="text-4xl font-bold text-center mb-10 tracking-wide"
         initial={{ opacity: 0, y: -20 }}

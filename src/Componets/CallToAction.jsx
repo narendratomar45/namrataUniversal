@@ -12,7 +12,7 @@ const CallToAction = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+    <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
@@ -22,7 +22,7 @@ const CallToAction = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              className="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-blue-400"
             >
               <div className="text-4xl font-bold text-blue-600 mb-2">
                 {stat.value}

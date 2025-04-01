@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
-    <div className="w-full h-auto bg-gray-200 py-20">
+    <div className="w-full h-auto bg-gray-100 py-20">
       <div className="bg-white w-[90%] mx-auto rounded-xl shadow-lg text-gray-700 py-16 px-8 border border-gray-200">
         <motion.div
           className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12"

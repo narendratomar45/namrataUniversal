@@ -58,7 +58,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-gray-200">
+    <section className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-12"
