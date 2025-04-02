@@ -34,7 +34,10 @@ const AboutSection = () => {
             />
           </div>
 
-          <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
+          <div
+            style={{ fontFamily: "Fredoka, sans-serif" }}
+            className="w-full md:w-1/2 text-center md:text-left space-y-6 "
+          >
             <h1
               className="text-5xl max-sm:text-3xl font-bold text-gray-800"
               data-aos="fade-up"

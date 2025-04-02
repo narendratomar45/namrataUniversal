@@ -39,7 +39,10 @@ const ContactForm = () => {
   return (
     <div className="min-h-screen bg-gray-100 my-10">
       <div data-aos="fade-down" className="pt-10 pb-8 px-6 text-center">
-        <h1 className="text-5xl max-sm:text-3xl font-bold text-gray-800 mb-4">
+        <h1
+          style={{ fontFamily: "Fredoka, sans-serif" }}
+          className="text-5xl max-sm:text-3xl font-bold text-gray-800 mb-4"
+        >
           Contact <span className="text-blue-600">Us</span>
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">

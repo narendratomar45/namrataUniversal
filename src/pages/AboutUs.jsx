@@ -24,7 +24,7 @@ const AboutUs = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent flex items-end justify-center pb-16">
           <div className="text-center max-w-3xl px-4">
             <h1
-              className="text-5xl font-bold text-gray-800 mb-4"
+              className="text-5xl font-bold text-blue-500 mb-4"
               data-aos="zoom-in"
             >
               About Us

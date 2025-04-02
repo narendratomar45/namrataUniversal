@@ -81,6 +81,7 @@ const OurClients = () => {
           className="text-center mb-10"
         >
           <h2
+            style={{ fontFamily: "Fredoka, sans-serif" }}
             className="text-5xl max-sm:text-3xl  font-bold text-gray-800 mb-5"
             data-aos="fade-up"
           >

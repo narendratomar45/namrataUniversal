@@ -66,7 +66,10 @@ const TestimonialsSection = () => {
           data-aos="fade-down"
           data-aos-duration="500"
         >
-          <h2 className="text-5xl max-sm:text-3xl font-bold text-gray-800 mb-4">
+          <h2
+            style={{ fontFamily: "Fredoka, sans-serif" }}
+            className="text-5xl max-sm:text-3xl font-bold text-gray-800 mb-4"
+          >
             Our <span className="text-blue-500">Reviews</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

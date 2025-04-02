@@ -23,7 +23,10 @@ const CallToAction = () => {
 
   return (
     <div className="bg-gray-50 py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
-      <h2 className=" text-gray-800 text-center font-bold text-5xl max-sm:text-3xl mb-8">
+      <h2
+        style={{ fontFamily: "Fredoka, sans-serif" }}
+        className=" text-gray-800 text-center font-bold text-5xl max-sm:text-3xl mb-8"
+      >
         Call <span className="text-blue-600">To Action</span>
       </h2>
       <div className="max-w-7xl mx-auto">
@@ -82,7 +85,7 @@ const CallToAction = () => {
                   href="tel:+918506922777"
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-400 transition-all duration-300 text-white font-medium rounded-lg shadow-sm hover:shadow-md "
                 >
-                  <FiPhone className="text-xl" />
+                  <FiPhone className="text-xl max-sm:text-lg" />
                   Call Now: +91 8506922777
                 </a>
                 <a

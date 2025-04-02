@@ -47,6 +47,7 @@ const FAQSection = () => {
     <div className="w-full mx-auto py-12 px-4 bg-gray-100" data-aos="fade-up">
       <div className="text-center mb-12">
         <h2
+          style={{ fontFamily: "Fredoka, sans-serif" }}
           className="text-5xl max-sm:text-3xl font-bold text-gray-800 mb-2"
           data-aos="fade-down"
         >

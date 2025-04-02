@@ -85,7 +85,10 @@ const SoftwareCategories = () => {
         className="text-5xl max-sm:text-3xl font-bold text-center mb-10 tracking-wide"
         data-aos="fade-down"
       >
-        <span className=" bg-clip-text text-gray-800">
+        <span
+          style={{ fontFamily: "Fredoka, sans-serif" }}
+          className=" bg-clip-text text-gray-800"
+        >
           Software <span className="text-blue-500">Solutions</span>
         </span>
       </h2>
@@ -98,7 +101,7 @@ const SoftwareCategories = () => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="bg-white p-3 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer  hover:border-blue-500 group rounded-tl-[50px] rounded-br-[50px] rounded-tr-4xl "
+              className="bg-white  shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer  hover:border-blue-500 group rounded-tl-[50px] rounded-br-[50px] rounded-tr-4xl border border-blue-400 "
             >
               <div className="overflow-hidden rounded-lg mb-4 rounded-tl-[50px] rounded-br-[50px] ">
                 <img
@@ -107,13 +110,13 @@ const SoftwareCategories = () => {
                   className="w-full h-48 object-cover  group-hover:scale-105 transition-transform duration-500 rounded-tl-[50px] rounded-br-[50px]  "
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+              <h3 className="text-xl font-semibold mb-3 ml-5 text-gray-800">
                 {category.title}
               </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
+              <p className="text-gray-600 mb-4 ml-5 leading-relaxed">
                 {category.description}
               </p>
-              <div className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-blue-100 to-blue-50 text-blue-600 font-medium border border-blue-200 hover:scale-[1.03] active:scale-95 transition-transform">
+              <div className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-blue-100 to-blue-50 text-blue-600 font-medium border border-blue-200 hover:scale-[1.03] active:scale-95 transition-transform ml-10 mb-5">
                 Learn More →
               </div>
             </Link>

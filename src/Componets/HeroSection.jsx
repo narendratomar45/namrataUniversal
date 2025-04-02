@@ -39,6 +39,7 @@ const HeroSection = () => {
 
       <div className="absolute px-4 w-full max-w-6xl mx-auto">
         <motion.h1
+          style={{ fontFamily: "Fredoka, sans-serif" }}
           className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 z-50 drop-shadow-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
