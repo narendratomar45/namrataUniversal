@@ -39,8 +39,8 @@ const ContactForm = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <div data-aos="fade-down" className="pt-10 pb-8 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          Contact <span className="text-blue-500">Us</span>
+        <h1 className="text-5xl max-sm:text-3xl font-bold text-gray-800 mb-4">
+          Contact <span className="text-blue-600">Us</span>
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           If you have any queries or doubts regarding IT Services, you can
@@ -49,21 +49,20 @@ const ContactForm = () => {
         </p>
       </div>
 
-      {/* Contact Cards */}
       <div className="flex flex-wrap justify-center gap-6 px-6 mb-12 rounded-tl-4xl rounded-br-4xl">
         {[
           {
             icon: <FiMail className="text-2xl" />,
             title: "Email Us",
             content: "namratauniversal@gmail.com",
-            color: "bg-blue-100 border border-blue-600",
+            color: "bg-blue-50 border border-blue-600",
             textColor: "text-blue-600",
           },
           {
             icon: <FiPhone className="text-2xl" />,
             title: "Call Us",
             content: "+918506922777/+918506944777",
-            color: "bg-green-100 border border-green-600",
+            color: "bg-green-50 border border-green-600",
             textColor: "text-green-600",
           },
           {
@@ -71,7 +70,7 @@ const ContactForm = () => {
             title: "Visit Us",
             content:
               "Plot No-827 1st Floor Shalimar Garden Extension-1 Ghaziabad, UP",
-            color: "bg-purple-100 border border-purple-600",
+            color: "bg-purple-50 border border-purple-600",
             textColor: "text-purple-600",
           },
         ].map((item, index) => (
@@ -103,9 +102,9 @@ const ContactForm = () => {
             <div className="text-center mb-6">
               <h2
                 data-aos="fade-up"
-                className="text-3xl font-bold mb-2 text-gray-800"
+                className="text-5xl max-sm:text-3xl font-bold mb-2 text-gray-800"
               >
-                Get In Touch
+                Get <span className="text-blue-600">In Touch</span>
               </h2>
               <p
                 data-aos="fade-up"
@@ -184,7 +183,7 @@ const ContactForm = () => {
                   data-aos="fade-up"
                   data-aos-delay="500"
                   type="submit"
-                  className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-white font-semibold shadow-sm transition duration-300 transform hover:scale-102 active:scale-98"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-400 transition-all duration-300 text-white font-semibold shadow-sm  transform hover:scale-102 active:scale-98 rounded"
                 >
                   Send Message
                 </button>

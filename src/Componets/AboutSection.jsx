@@ -15,13 +15,12 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <div className="w-full h-auto bg-gray-100 py-20 overflow-hidden">
-      <div className="bg-white w-[90%] mx-auto rounded-xl shadow-lg text-gray-700 py-16 px-8 border border-gray-200">
+    <div className="w-full h-auto bg-gray-100 py-10 overflow-hidden">
+      <div className="bg-white w-[90%] mx-auto rounded-xl shadow-lg text-gray-700 py-10 px-8 border border-gray-200">
         <div
           className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12"
           data-aos="fade-up"
         >
-          {/* Image Section */}
           <div
             className="w-full md:w-1/2 relative group"
             data-aos="zoom-in"
@@ -35,10 +34,9 @@ const AboutSection = () => {
             />
           </div>
 
-          {/* Text Section */}
           <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
             <h1
-              className="text-5xl font-bold text-gray-800"
+              className="text-5xl max-sm:text-3xl font-bold text-gray-800"
               data-aos="fade-up"
               data-aos-delay="300"
             >
@@ -93,9 +91,9 @@ const AboutSection = () => {
 
             <div data-aos="fade-up" data-aos-delay="800">
               <Link to={"/aboutus"}>
-                <button className="relative overflow-hidden bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group hover:scale-[1.03] active:scale-95">
+                <button className="relative overflow-hidden bg-gradient-to-r from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-400 transition-all duration-300 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg  group hover:scale-[1.03] active:scale-95">
                   <span className="relative z-10 flex items-center gap-2">
-                    Learn More
+                    Read More About Us
                   </span>
                   <span className="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-100 transition duration-300" />
                 </button>

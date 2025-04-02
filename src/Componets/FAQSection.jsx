@@ -47,10 +47,10 @@ const FAQSection = () => {
     <div className="w-full mx-auto py-12 px-6 bg-gray-100" data-aos="fade-up">
       <div className="text-center mb-12">
         <h2
-          className="text-3xl font-bold text-gray-800 mb-2"
+          className="text-5xl max-sm:text-3xl font-bold text-gray-800 mb-2"
           data-aos="fade-down"
         >
-          Frequently Asked Questions
+          Frequently <span className="text-blue-600">Asked Questions</span>
         </h2>
         <p className="text-lg text-gray-600" data-aos="fade-up">
           Find answers to common questions about our software solutions

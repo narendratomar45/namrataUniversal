@@ -22,8 +22,10 @@ const CallToAction = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
-      <h2 className="text-blue-600 text-center font-bold text-5xl mb-8">Call To Action</h2>
+    <div className="bg-gray-50 py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+      <h2 className=" text-gray-800 text-center font-bold text-5xl max-sm:text-3xl mb-8">
+        Call <span className="text-blue-600">To Action</span>
+      </h2>
       <div className="max-w-7xl mx-auto">
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -48,7 +50,6 @@ const CallToAction = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
         <div
           data-aos="fade-up"
           data-aos-delay="200"
@@ -59,7 +60,7 @@ const CallToAction = () => {
               <h2
                 data-aos="fade-right"
                 data-aos-delay="300"
-                className="text-3xl font-bold text-gray-800 mb-4"
+                className="text-3xl max-sm:text-2xl max-sm:text-center  font-bold text-gray-800 mb-4"
               >
                 Have Any Questions?
               </h2>
@@ -79,7 +80,7 @@ const CallToAction = () => {
               >
                 <a
                   href="tel:+918506922777"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-sm hover:shadow-md transition-all"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-400 transition-all duration-300 text-white font-medium rounded-lg shadow-sm hover:shadow-md "
                 >
                   <FiPhone className="text-xl" />
                   Call Now: +91 8506922777
@@ -107,7 +108,6 @@ const CallToAction = () => {
                   data-aos-delay="700"
                 />
               </div>
-              {/* Decorative elements */}
               <div
                 className="absolute -bottom-20 -right-20 w-40 h-40 rounded-full bg-blue-400 opacity-10"
                 data-aos="fade"

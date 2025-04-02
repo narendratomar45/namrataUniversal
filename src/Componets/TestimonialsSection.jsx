@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import user from "../assets/images/user1.jpeg";
-import "aos/dist/aos.css"; 
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
@@ -59,14 +59,14 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-10 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <div
           className="text-center mb-12"
           data-aos="fade-down"
           data-aos-duration="500"
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-5xl max-sm:text-3xl font-bold text-gray-800 mb-4">
             Our <span className="text-blue-500">Reviews</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-blue-600"
+                className="bg-white p-8 rounded-xl shadow hover:shadow-md transition-all duration-300 "
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
                 data-aos-duration="500"

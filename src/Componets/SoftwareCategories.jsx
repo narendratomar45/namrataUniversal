@@ -79,13 +79,13 @@ const SoftwareCategories = () => {
   };
 
   return (
-    <div className="bg-gray-100 text-gray-800 py-16 px-6 md:px-20">
+    <div className="bg-gray-50 text-gray-800 py-10 px-6 md:px-20">
       <h2
-        className="text-4xl font-bold text-center mb-10 tracking-wide"
+        className="text-5xl max-sm:text-3xl font-bold text-center mb-10 tracking-wide"
         data-aos="fade-down"
       >
-        <span className="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
-          Software Solutions
+        <span className=" bg-clip-text text-gray-800">
+          Software <span className="text-blue-500">Solutions</span>
         </span>
       </h2>
 
@@ -97,7 +97,7 @@ const SoftwareCategories = () => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="bg-white p-6  shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-200 hover:border-blue-500 group rounded-tl-[50px] rounded-br-[50px] rounded-tr-4xl "
+              className="bg-white p-6  shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer  hover:border-blue-500 group rounded-tl-[50px] rounded-br-[50px] rounded-tr-4xl "
             >
               <div className="overflow-hidden rounded-lg mb-4 rounded-tl-[50px] rounded-br-[50px] ">
                 <img

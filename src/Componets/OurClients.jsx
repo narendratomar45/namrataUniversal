@@ -81,7 +81,7 @@ const OurClients = () => {
           className="text-center mb-10"
         >
           <h2
-            className="text-4xl sm:text-5xl font-bold text-gray-900 mb-5"
+            className="text-5xl max-sm:text-3xl  font-bold text-gray-800 mb-5"
             data-aos="fade-up"
           >
             Trusted By <span className="text-blue-600">Industry Leaders</span>
@@ -126,7 +126,7 @@ const OurClients = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full shadow-lg shadow-blue-500/20 transition-all duration-300"
+            className="mt-6 bg-gradient-to-r from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-400 transition-all duration-300 text-white font-medium py-3 px-8 rounded shadow-lg shadow-blue-500/20  "
           >
             Become a Client
           </motion.button>
