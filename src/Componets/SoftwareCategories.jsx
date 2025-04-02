@@ -79,7 +79,7 @@ const SoftwareCategories = () => {
   };
 
   return (
-    <div className="bg-gray-50 text-gray-800 py-10 px-6 md:px-20">
+    <div className="w-full bg-gray-50 text-gray-800 py-10 px-6 md:px-20">
       <h2
         className="text-5xl max-sm:text-3xl font-bold text-center mb-10 tracking-wide"
         data-aos="fade-down"
@@ -88,7 +88,6 @@ const SoftwareCategories = () => {
           Software <span className="text-blue-500">Solutions</span>
         </span>
       </h2>
-
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {softwareCategories
           .slice(0, more ? softwareCategories.length : 3)
@@ -97,7 +96,7 @@ const SoftwareCategories = () => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="bg-white p-6  shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer  hover:border-blue-500 group rounded-tl-[50px] rounded-br-[50px] rounded-tr-4xl "
+              className="bg-white p-3 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer  hover:border-blue-500 group rounded-tl-[50px] rounded-br-[50px] rounded-tr-4xl "
             >
               <div className="overflow-hidden rounded-lg mb-4 rounded-tl-[50px] rounded-br-[50px] ">
                 <img
@@ -118,7 +117,6 @@ const SoftwareCategories = () => {
             </div>
           ))}
       </div>
-
       <div
         className="text-center mt-12"
         data-aos="fade-up"

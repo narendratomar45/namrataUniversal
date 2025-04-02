@@ -60,7 +60,7 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <section className="py-10 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-3">
         <div
           className="text-center mb-12"
           data-aos="fade-down"

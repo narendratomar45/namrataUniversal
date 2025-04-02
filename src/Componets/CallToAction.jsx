@@ -56,7 +56,7 @@ const CallToAction = () => {
           className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow"
         >
           <div className="md:flex">
-            <div className="md:w-2/3 p-8 md:p-12">
+            <div className="md:w-2/3 p-8 md:p-8">
               <h2
                 data-aos="fade-right"
                 data-aos-delay="300"

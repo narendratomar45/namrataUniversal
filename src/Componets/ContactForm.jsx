@@ -93,7 +93,7 @@ const ContactForm = () => {
         ))}
       </div>
 
-      <div className="flex flex-col lg:flex-row w-full px-6 pb-16 gap-8 max-w-7xl mx-auto ">
+      <div className="flex flex-col lg:flex-row w-full px-4 pb-16 gap-8 max-w-7xl mx-auto ">
         <div
           data-aos="fade-right"
           className="w-full lg:w-1/2 flex items-center justify-center "

@@ -45,7 +45,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
         >
           <motion.span
-            className="inline-block top-1/2 right-1/3 -translate-x-1/12 -translate-y-1/2 overflow-hidden whitespace-nowrap border-r-2 border-white pr-1 max-sm:text-xl"
+            className="inline-block  overflow-hidden whitespace-nowrap border-r-2 border-white max-sm:top-1/2  max-sm:-translate-x-[20px] max-sm:-translate-y-1/4 max-sm:text-2xl"
             initial={{ width: 0 }}
             animate={{ width: `${text.length}ch` }}
             transition={{ duration: 2, ease: "linear" }}

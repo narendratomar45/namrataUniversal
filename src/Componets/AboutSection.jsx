@@ -16,7 +16,7 @@ const AboutSection = () => {
 
   return (
     <div className="w-full h-auto bg-gray-100 py-10 overflow-hidden">
-      <div className="bg-white w-[90%] mx-auto rounded-xl shadow-lg text-gray-700 py-10 px-8 border border-gray-200">
+      <div className="bg-white w-[95%]  mx-auto rounded-xl shadow-lg text-gray-700 py-10 px-6 border border-gray-200">
         <div
           className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12"
           data-aos="fade-up"
@@ -44,7 +44,7 @@ const AboutSection = () => {
             </h1>
 
             <p
-              className="text-lg leading-relaxed text-gray-600"
+              className="text-lg text-start leading-relaxed text-gray-600"
               data-aos="fade-up"
               data-aos-delay="400"
             >
