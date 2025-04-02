@@ -51,7 +51,6 @@ const Navbar = () => {
           </div>
         </motion.div>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link, index) => (
             <motion.div

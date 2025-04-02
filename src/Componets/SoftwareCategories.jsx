@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import systemSoftware from "../assets/images/systemSoftware.jpg";
-import softwareDevelopment from "../assets/images/softwareDevlopment.avif";
+import softwareDevelopment from "../assets/images/softwareDevelopment.jpg";
 import crmSoftware from "../assets/images/crmSoftware.jpg";
 import sapSoftware from "../assets/images/sapSoftware.jpg";
 import erpSoftware from "../assets/images/erpSoftware.jpg";
@@ -10,6 +10,7 @@ import aiSoftware from "../assets/images/aiSoftware.jpg";
 import gamingSoftware from "../assets/images/gamingSoftware.jpeg";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const softwareCategories = [
   {
@@ -92,7 +93,8 @@ const SoftwareCategories = () => {
         {softwareCategories
           .slice(0, more ? softwareCategories.length : 3)
           .map((category, index) => (
-            <div
+            <Link
+              to={`/software/${category.title}`}
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
@@ -114,7 +116,7 @@ const SoftwareCategories = () => {
               <div className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-blue-100 to-blue-50 text-blue-600 font-medium border border-blue-200 hover:scale-[1.03] active:scale-95 transition-transform">
                 Learn More →
               </div>
-            </div>
+            </Link>
           ))}
       </div>
       <div
