@@ -11,6 +11,7 @@ import gamingSoftware from "../assets/images/gamingSoftware.jpeg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 const softwareCategories = [
   {
@@ -101,13 +102,13 @@ const SoftwareCategories = () => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="bg-white  shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer  hover:border-blue-500 group rounded-tl-[50px] rounded-br-[50px] rounded-tr-4xl border border-blue-400 "
+              className="bg-white  shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer  hover:border-blue-500 group custom-border border border-blue-400 "
             >
-              <div className="overflow-hidden rounded-lg mb-4 rounded-tl-[50px] rounded-br-[50px] ">
+              <div className="overflow-hidden rounded-lg mb-4 custom-border  ">
                 <img
                   src={category.image}
                   alt={category.title}
-                  className="w-full h-48 object-cover  group-hover:scale-105 transition-transform duration-500 rounded-tl-[50px] rounded-br-[50px]  "
+                  className="w-full h-56 object-cover  group-hover:scale-105 transition-transform duration-500  custom-border  "
                 />
               </div>
               <h3 className="text-xl font-semibold mb-3 ml-5 text-gray-800">

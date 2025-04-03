@@ -650,7 +650,7 @@ const SoftwareDetail = () => {
   }
 
   return (
-    <div className="w-full bg-gray-50 text-gray-800 py-16">
+    <div className="w-full bg-gray-50 text-gray-800 ">
       <div className="w-full">
         <div className="w-full h-[80vh]" data-aos="fade-up">
           <img

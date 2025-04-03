@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import user from "../assets/images/user1.jpeg";
 import "aos/dist/aos.css";
+import '../App.css'
 
 const testimonials = [
   {
@@ -94,7 +95,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div
-                className="bg-white p-8 rounded-xl shadow hover:shadow-md transition-all duration-300 "
+                className="bg-white p-8 rounded-xl shadow hover:shadow-md custom-border transition-all duration-300  "
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
                 data-aos-duration="500"

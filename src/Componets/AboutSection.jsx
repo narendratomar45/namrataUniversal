@@ -3,6 +3,7 @@ import about from "../assets/images/about.jpg";
 import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import '../App.css'
 
 const AboutSection = () => {
   useEffect(() => {
@@ -30,7 +31,7 @@ const AboutSection = () => {
             <img
               src={about}
               alt="about image"
-              className="w-full rounded-lg shadow-md hover:shadow-lg transition-all duration-500 border border-blue-600 rounded-tl-[100px] rounded-br-[100px] rounded-tr-4xl max-sm:rounded-tl-[60px] max-sm:rounded-br-[60px] max-sm:rounded-tr-4xl hover:scale-[1.02] "
+              className="w-full custom-border transition-all duration-500 border border-blue-600  hover:scale-[1.02] "
             />
           </div>
 
