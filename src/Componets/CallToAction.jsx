@@ -24,7 +24,6 @@ const CallToAction = () => {
 
   return (
     <div className="w-full relative overflow-hidden">
-      {/* Background Video */}
       <div className="w-full h-full absolute inset-0  overflow-hidden">
         <video
           autoPlay
@@ -35,13 +34,11 @@ const CallToAction = () => {
         >
           <source src={contactVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        {/* <div className="absolute inset-0 bg-black bg-opacity-40"></div> */}
       </div>
 
-      {/* Content */}
-      <div className="relative bg-gray-50/95 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-gray-80/95 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Section Title */}
           <div className="text-center mb-16" data-aos="fade-up">
             <h2
               style={{ fontFamily: "Fredoka, sans-serif" }}
@@ -54,8 +51,6 @@ const CallToAction = () => {
               solutions
             </p>
           </div>
-
-          {/* Stats Grid */}
           <div
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
             data-aos="fade-up"
